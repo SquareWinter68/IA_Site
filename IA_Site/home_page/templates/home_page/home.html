@@ -1,0 +1,177 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--DJANGO IMPORTS-->
+    <link rel="stylesheet" href="{% static 'home_page/css/home-style.css' %}">
+    <link rel="stylesheet" href="{% static 'home_page/css/modal_form.css' %}">
+    <link rel="stylesheet" href="{% static 'home_page/css/image_slider.css' %}">
+    <link rel="stylesheet" href="{% static 'home_page/css/header_footer.css' %}">
+    <title>Document</title>
+
+    <script defer src="{% static 'home_page/js/home_behaviour.js' %}"></script>
+    <script defer src="{% static 'home_page/js/form_validation.js' %}"></script>
+    <script defer src="{% static 'home_page/js/image_slider.js' %}"></script>
+    
+</head>
+<body>
+    <div class="parallax">
+        <nav class="phone-view">
+            <a href="{% url "home-page"  %}"><img src="{% static 'home_page/images/logo.png' %}" alt=""></a>
+            <div class="menu3">
+                <ul class="nav_links">
+                    <li><a href="{% url "news-page" %}">News</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        
+        <div class="parallax_inner">
+            <h2>
+                Pridruzi se
+            </h2>
+            <button id="scrollButton" class="create-account-button" onclick="open_modal(event)">
+                Sign Up
+            </button>
+        </div>
+    </div>
+    <!--BEGINNING OF MODAL FORM-->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+          <form action="">
+            <div class="form-container">
+              <div class="form-container-content">
+                <div class="left-column">
+                  <div class="personalia-1">
+                    <input type="text" id="name" placeholder="Name" required>
+                    <input type="text" id="last-name" placeholder="Last-name" required>
+                    <input type="date" id="date-of-birth" placeholder="10.03.2003" required>
+                    <input type="text" id="address" placeholder="John Johansons Gate 5" required>
+                  </div>
+                  <textarea class="resizable-textarea" id="aditional-info" placeholder="Names and surnames of family members: Jhon Doe"></textarea>
+                </div>
+                <div class="right-column">
+                  <div class="personalia-2">
+                    <input type="text" id="postal-code" placeholder="42" required>
+                    <input type="text" id="city" placeholder="Oslo" required>
+                    <input type="text" id="phone-number" placeholder="phone-number" required>
+                    <input type="email" id="email" placeholder="jhon.doe@gmail.com" required>
+                  </div>
+                  <textarea class="resizable-textarea" name="" id="" placeholder="Questions?"></textarea>
+                </div>
+                <div class="last-row">
+          
+                  <div class="terms-of-service">
+                    <Label>
+                       I HAVE READ AND AGREE TO THE TERMS AND CONDITIONS
+                      <input type="checkbox" id="terms-and-conditions">
+                    </Label>
+                    
+                  </div>
+                </div>
+              </div>
+              <div class="form-buttons">
+                <input type="submit" value="Submit" class="signin_button">
+                <!--<button class="signin_button" onclick="validateForm()">Submit</button>-->
+                <button class="cancel-button" onclick="close_modal()">Cancel</button>
+              </div>
+              
+            </div>
+        </form>
+        </div>
+        
+      </div>
+      
+    <div class="container-ivo">
+        <div class="image">
+            <img src="{% static 'home_page/images/Ivo_Andric_Visegrad.jpg' %}" alt="Your Image">
+        </div>
+        <div class="text-ivo">
+            <h2>About us</h2>
+          <p>
+            Удружење Срба у Рогаланду ”Иво Андрић” је добровољна, неполитичка и независна организација основана од Срба који живе у Ставангеру и околини.
+
+Циљ удружења је неговање српске традиције и културе, очување језика и идентитета Срба у Норвешкој као и развијање пријатељства и међусобне сарадње српског и норвешког народа.
+
+Хуманитарни рад је важна делатност Удружења.
+
+Удружење је отворено је за све људе добре воље.
+          </p>
+        </div>
+    </div>
+    
+    <!--
+    <h1>
+        SECTION
+    </h1>
+    <h1>
+        SECTION
+    </h1>
+    <h1>
+        SECTION
+    </h1>
+    -->
+    <!--BEGINNING OF THE SLIDER-->
+    <div class="image-slider-container">
+      <div class="news-info">
+        <h2>What's new</h2>
+        <p>Find out what new activities have recently taken place</p>
+      </div>
+      <div>
+        <div class="slider-container">
+          <div class="slides">
+            <div class="slide">
+              <a href=""><img src="{% static 'home_page/images/image1.jpg' %}" alt="Image 1"></a>
+              <div class="text-overlay">
+                <h2 class="slider-text">News Headline 1</h2>
+              </div>
+            </div>
+            <div class="slide">
+              <a href=""><img src="{% static 'home_page/images/image2_9_16.jpg' %}" alt="Image 2"></a>
+              <div class="text-overlay">
+                <h2 class="slider-text">News Headline 2</h2>
+              </div>
+            </div>
+            <div class="slide">
+              <a href=""><img src="{% static 'home_page/images/Ivo_Andric_Visegrad9_16.jpg' %}" alt=""></a>
+              <div class="text-overlay">
+                  <h2 class="slider-text">SHIT and stuff</h2>
+              </div>
+            </div>
+      
+            <!-- Add more slides as needed -->
+          </div>
+        </div>
+      
+        <div class="radio-container">
+          <input type="radio" id="radio1" name="slider" checked>
+          <label for="radio1"></label>
+          <input type="radio" id="radio2" name="slider">
+          <label for="radio2"></label>
+          <input type="radio" id="radio3" name="slider">
+          <label for="radio3"></label>
+          <!-- Add more radio buttons as needed -->
+        </div>
+      </div>
+    </div>
+    
+
+</body>
+</html>
+
+<footer class="footer" style="position: relative;">
+  <ul class="footer-links">
+      <li><img src="{% static 'home_page/images/instagram_white.svg' %}" alt=""></li>
+      <li><img src="{% static 'home_page/images/x-twitter_white.svg' %}" alt=""></li>
+      <li><img src="{% static 'home_page/images/envelope_white.svg' %}" alt=""></li>
+  </ul>
+  <div class="copyright">
+      &copy; 2023 Your News Website. All rights reserved.
+  </div>
+  
+</footer>

@@ -1,0 +1,148 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+
+nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 5px 5%;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    /*background-color: #111111;*/
+    /*background: var(--custom-gradient-vertical);*/
+    background-color: #333;
+    opacity: 80%;
+}
+
+nav img{
+    width: 45px;
+    height: 60px;
+    align-self: center;
+}
+nav a{
+    align-self: center;
+}
+
+
+li, a, button{
+    text-decoration: none;
+    font-size: large;
+    font-family: 'Lora', serif;
+    color: white;
+}
+
+.nav_links{
+    list-style: none;
+    
+}
+
+.nav_links li{
+    display: inline-block;
+    padding: 20px;
+    position: relative;
+    text-transform: uppercase;
+}
+
+
+
+.nav_links li:after{
+    content: "";
+    width: 0%;
+    height: 2px;
+    display: block;
+    transition: all 0.5s ease;
+}
+
+.nav_links li:hover::after{
+    width: 100%;
+    height: 2px;
+    background-color: #11998e;
+}
+
+
+
+
+
+.footer{
+    background-color: #333;
+    color: #fff;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+.footer img{
+    margin-top: 10px;
+}
+
+.footer-links{
+    display: flex;
+    list-style: none;
+    
+    justify-content: center;
+}
+
+.footer-links li{
+    display: inline-block;
+    padding-right: 50px;
+}
+
+.footer-links li  :hover{
+    scale: 1.2;
+    text-decoration: underline;
+}
+
+.footer-links img{
+    width: 30px;
+    height: 30px;
+}
+
+.copyright{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+
+
+@media (max-width: 1012px){
+    
+
+}
+
+@media (max-width: 1542px){
+    .menu3{
+        grid-column: 2/ span 2;
+    }
+}
+
+@media (max-width: 950px) {
+    nav {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+    }
+
+}
+
+@media (max-width: 400px) {
+    .phone-view{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;  
+    }
+    .nav_links{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+
+    }
+}

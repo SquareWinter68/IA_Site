@@ -1,0 +1,155 @@
+.modal{
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    transform: scale(0);
+  }
+  
+  .modal.show {
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s linear 0s, opacity 0.3s linear;
+    transform: scale(1);
+  }
+  
+  .modal-content{
+     margin-top: 15%;
+  }
+  
+  .form-container {
+    transition: width 0.5s ease-in-out; /* Add a transition effect */
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center; /* Align items to the start */
+    justify-content: center; /* Add space between the items */
+    width: 50%; /* Increase the width of the form */
+    margin: 0 auto; /* Center the form */
+    padding: 20px; /* Add some padding */
+    background-color: #f8f8f8; /* Add a light background color */
+    border-radius: 10px; /* Round the corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  }
+  
+  .form-container-content{
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+  }
+  
+  .left-column textarea,
+  .right-column textarea{
+    width: 100%;
+    height: 100px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+  
+  }
+  
+  .personalia-1,
+  .personalia-2 {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 15px;
+  }
+  
+  .last-row{
+    grid-column: span 2;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+  
+  
+  .textboxes textarea,
+  .personalia-1 input,
+  .personalia-2 input,
+  .selection-boxes input,
+  .remarks textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 16px; /* Increase the font size */
+    /* Disable the resize property */
+  }
+  
+  .form-buttons{
+    margin-top: 20px;
+    display: flex;
+    flex-flow: row wrap;
+  }
+  
+  
+  .signin_button, .cancel-button{
+    background-color: #007BFF; /* Deep blue */
+    color: #ffffff;
+    border-radius: 30px;
+    font-family: helvetica;
+    font-size: large;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    width: 5em;
+    height: 2em;
+  }
+  
+  .signin_button:hover{
+    background-color: #007bffbe;
+  }
+  
+  .signin_button:active{
+    outline: none;
+    scale: 0.9;
+  }
+  
+  .cancel-button{
+    background-color: #6c757d; /* Light gray */
+    color: #ffffff;
+    margin-left: 10px;
+  }
+  
+  .cancel-button:hover{
+    background-color: #6c757d8e;
+  }
+  
+  .cancel-button:active{
+    outline: none;
+    scale: 0.9;
+  }
+  
+  
+  
+  @media (max-width: 1150px) {
+    .form-container {
+      width: 90%;  
+    }
+  
+    .form-container-content{
+      width: 90%;
+    }
+  
+  }
+  
+  @media (max-width: 600px) {
+    .form-container-content {
+     display: flex;
+     flex-direction: column;
+      gap: 50px;
+    }
+    
+  }

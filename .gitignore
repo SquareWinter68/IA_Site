@@ -1,0 +1,33 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+# Virtual environment
+venv/
+env/
+
+# Site-specific files
+*.log
+*.pot
+*.pyc
+local_settings.py
+
+# Ignore pipenv virtual environment
+Pipfile
+Pipfile.lock
+
+# Ignore VSCode settings
+.vscode/
+# Ignore pytest cache
+__pycache__/
+.cachepickle
+
+# Ignore coverage reports
+htmlcov/
+
+# Ignore migration files
+/migrations/
+
+# Ignore secret key
+secret_key.txt
