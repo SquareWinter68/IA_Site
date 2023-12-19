@@ -1,4 +1,4 @@
-from ckeditor_uploader.widgets import CKEditorUploadingWidget
+from ckeditor.widgets import CKEditorWidget
 from django.contrib import admin
 from .models import News
 from django.db import models
@@ -6,7 +6,7 @@ from django.db import models
 
 class NewsAdmin(admin.ModelAdmin):
     formfield_overrides = {
-        models.TextField: {'widget': CKEditorUploadingWidget},
+        models.TextField: {'widget': CKEditorWidget},
 
     }
 

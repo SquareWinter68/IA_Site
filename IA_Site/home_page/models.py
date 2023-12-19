@@ -8,7 +8,7 @@ class News(models.Model):
     title = models.CharField(max_length=150)
     date_posted = models.DateTimeField(default=timezone.now)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
-    html_content = RichTextUploadingField(blank=True, null=True)
+    html_content = RichTextField(blank=True, null=True)
     image = models.ImageField(blank=True, null=True)
 
 
