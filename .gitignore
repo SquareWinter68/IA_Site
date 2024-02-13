@@ -28,6 +28,13 @@ htmlcov/
 
 # Ignore migration files
 /migrations/
+migrations/
 
 # Ignore secret key
 secret_key.txt
+
+script.py
+media/
+data.pcl
+
+uploads

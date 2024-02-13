@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var parallax_element = document.querySelector(".parallax");
   
     // Navigate to sibling folder of current folder
-    var images_folder = "../images/"
+    var images_folder = "http://127.0.0.1:8000/media/uploads/"
 
     // Fix this with a fetch call from django later
     var image_filenames = ['image1.jpg', 'image2.jpg'];
@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function() {
     function update_image(){
         current_image = (current_image + 1) % image_filenames.length;
         
-        parallax_element.style.backgroundImage = "url('resources/static/images/" + image_filenames[current_image] + "')";
+        parallax_element.style.backgroundImage = "url('http://127.0.0.1:8000/media/uploads/" + image_filenames[current_image] + "')";
         console.log(images_folder + image_filenames[current_image]);
     }
     // Change the image every 5 seconds

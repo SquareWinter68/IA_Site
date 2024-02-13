@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import News
 # Create your views here.
 
 # DUMMY DATA testing the context passed to templates
@@ -10,10 +11,15 @@ data = [
 ]
 
 def home(request):
+    data = News.objects.all()
     context = {
-        "posts": data
+        "articles": list(reversed(list(data)))[:3]
     }
     return render(request, 'home_page/home.html', context)
 
 def about(request):
-    return render(request, 'home_page/news.html')
+    data = News.objects.all()
+    context = {
+        "articles": list(reversed(list(data)))[:3]
+    }
+    return render(request, 'home_page/news.html', context)

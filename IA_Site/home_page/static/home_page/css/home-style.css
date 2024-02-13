@@ -28,7 +28,7 @@ body{
 }
 
 .parallax{
-    background-image: url("{% static 'home_page/static/images/image2.jpg' %}");
+    background-image: url(" ../images/image2.jpg ");
     /* Set the height of the element */
     height: 600px;
   

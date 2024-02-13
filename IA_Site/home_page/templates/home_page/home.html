@@ -105,17 +105,7 @@
         </div>
     </div>
     
-    <!--
-    <h1>
-        SECTION
-    </h1>
-    <h1>
-        SECTION
-    </h1>
-    <h1>
-        SECTION
-    </h1>
-    -->
+  
     <!--BEGINNING OF THE SLIDER-->
     <div class="image-slider-container">
       <div class="news-info">
@@ -125,6 +115,7 @@
       <div>
         <div class="slider-container">
           <div class="slides">
+            <!--
             <div class="slide">
               <a href=""><img src="{% static 'home_page/images/image1.jpg' %}" alt="Image 1"></a>
               <div class="text-overlay">
@@ -143,6 +134,15 @@
                   <h2 class="slider-text">SHIT and stuff</h2>
               </div>
             </div>
+            -->
+            {% for article in articles  %}
+              <div class="slide">
+                <a href="{% url "news-page"  %}#{{ article.id }}"><img src="{{ article.image.url }}" alt=""></a>
+                <div class="text-overlay">
+                    <h2 class="slider-text">{{ article.title }}</h2>
+                </div>
+              </div>
+            {% endfor %}
       
             <!-- Add more slides as needed -->
           </div>
@@ -160,11 +160,10 @@
       </div>
     </div>
     
-
 </body>
 </html>
 
-<footer class="footer" style="position: relative;">
+<footer id="contact" class="footer" style="position: relative;">
   <ul class="footer-links">
       <li><img src="{% static 'home_page/images/instagram_white.svg' %}" alt=""></li>
       <li><img src="{% static 'home_page/images/x-twitter_white.svg' %}" alt=""></li>

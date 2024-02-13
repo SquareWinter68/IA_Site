@@ -9,6 +9,6 @@ class NewsAdmin(admin.ModelAdmin):
         models.TextField: {'widget': CKEditorWidget},
 
     }
+    readonly_fields = ('id',)
 
-
-admin.site.register(News)
+admin.site.register(News, NewsAdmin)
