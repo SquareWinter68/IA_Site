@@ -1,0 +1,16 @@
+asgiref==3.6.0
+beautifulsoup4==4.12.2
+colorama==0.4.6
+Django==4.2
+django-ckeditor==6.7.0
+django-js-asset==2.2.0
+mysql-connector==2.2.9
+mysql-connector-python==8.2.0
+Pillow==10.1.0
+protobuf==4.21.12
+pygame==2.1.2
+PyMySQL==1.1.0
+soupsieve==2.5
+sqlparse==0.4.4
+tqdm==4.65.0
+tzdata==2023.3
